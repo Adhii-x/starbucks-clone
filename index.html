@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="assets/images/logo (1).png" class="logo" /></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just coffee <br />It's <span>Starbucks</span></h2>
+          <p>
+            It takes many hands to craft the perfect cup of coffee from the
+            farmers who tend to the red-ripe coffee cherries, to the master
+            roasters who coax the best from every bean, and to the barista who
+            serves it with care. We are committed to the highest standards of
+            quality and service, embracing our heritage while innovating to
+            create new experiences to savor.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="assets/images/img1.png" class="Starbucks" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="assets/images/thumb1.png"
+            onclick="imgSlider('assets/images/img1.png');changeCircleColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/thumb2.png"
+            onclick="imgSlider('assets/images/img2.png');changeCircleColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/thumb3.png"
+            onclick="imgSlider('assets/images/img3.png');changeCircleColor('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li><a href="#"></a><img src="assets/images/facebook.png" /></li>
+        <li><a href="#"></a><img src="assets/images/twitter.png" /></li>
+        <li><a href="#"></a><img src="assets/images/instagram.png" /></li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector('.Starbucks').src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        menuToggle.classList.toggle('active')
+      }
+    </script>
+  </body>
+</html>
